@@ -1,0 +1,15 @@
+#+TITLE: Docker remove all containers
+#+PROPERTY: header-args:sh :session *shell docker-remove-all-containers sh* :results silent raw
+#+OPTIONS: ^:nil
+
+** System environment
+
+- CentOS 8.1
+
+- Docker 19.03
+
+** Docker: remove all containers
+
+#+BEGIN_SRC sh
+docker rm `docker ps --all | cut -d " " -f 1`
+#+END_SRC
